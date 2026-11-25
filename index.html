@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>David Uche · Software engineer, mobile and fintech</title>
+<meta name="description" content="David Uche is a software engineer in Lagos building Flutter and React Native apps and the TypeScript APIs behind them, mostly where money moves.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="David Uche · Software engineer">
+<meta property="og:description" content="Mobile apps and the APIs behind them. Flutter, React Native, TypeScript, Postgres. Lagos.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111'/%3E%3Cpath d='M20 16h12c11 0 16 7 16 16s-5 16-16 16H20z' fill='none' stroke='%23F2B705' stroke-width='7' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#work">Skip to work</a>
+<header class="top">
+  <a class="mark" href="#top" aria-label="David Uche, top">DU</a>
+  <nav aria-label="Sections">
+    <a href="#work">Work</a>
+    <a href="#stack">Stack</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <p class="kicker">Lagos, Nigeria</p>
+    <h1>David Uche</h1>
+    <p class="lead">Software engineer. I build mobile apps and the APIs behind them, mostly where money moves.</p>
+    <ul class="actions">
+      <li><a class="btn primary" href="mailto:acarsondev@gmail.com">Email me</a></li>
+      <li><a class="btn" href="https://www.linkedin.com/in/uche-chimdindu-david">LinkedIn</a></li>
+      <li><a class="btn" href="https://github.com/acarsondave">GitHub</a></li>
+    </ul>
+  </section>
+
+  <section id="work" aria-labelledby="work-h">
+    <h2 id="work-h">Work</h2>
+
+    <article class="case">
+      <div class="meta"><span class="tag">Jul 2026 – now</span><span class="tag">Flutter · TypeScript · Postgres</span></div>
+      <h3>Moneque</h3>
+      <p class="what">Naira wallet: bank transfers, bills, virtual dollar cards, crypto and KYC.</p>
+      <ul class="facts">
+        <li>Flutter app for iOS and Android, and the TypeScript API on Cloudflare Workers.</li>
+        <li>Six payment and identity providers wired in: Flutterwave, Korapay, Swervpay, VTpass, Quidax, Didit.</li>
+        <li>Double-entry Postgres ledger with idempotency keys. A retried transfer or replayed webhook never posts twice.</li>
+        <li>Firebase App Check, plus biometric payment approval that signs a short-lived server challenge.</li>
+      </ul>
+      <dl class="nums">
+        <div><dt>API test files</dt><dd>186</dd></div>
+        <div><dt>Flutter test files</dt><dd>149</dd></div>
+        <div><dt>SQL migrations</dt><dd>53</dd></div>
+      </dl>
+      <p class="links"><a href="https://apps.apple.com/app/id6796786899">App Store</a><a href="https://play.google.com/store/apps/details?id=app.moneque.wallet">Google Play</a></p>
+    </article>
+
+    <article class="case">
+      <div class="meta"><span class="tag">Sep 2026 – now</span><span class="tag">Flutter · Workers · React</span></div>
+      <h3>Property platform, Hong Kong</h3>
+      <p class="what">Client project for an estate agency. One Flutter app for agents and buyers, in English and Traditional Chinese, plus the REST API and a React admin console.</p>
+      <ul class="facts">
+        <li>Saved-search alerts, QR sharing, PDF brochures and a 360 photo viewer.</li>
+        <li>Smart paste turns a messy WhatsApp or WeChat listing into a typed form. On 20 held-out messages, rules alone hit 80% on the weakest field (up from 55%). Rules plus Claude Haiku 4.5 hit 100%.</li>
+        <li>k6 load test found two scaling bugs. Both fixed test-first: alert fan-out failing above 100 recipients, and sorts that read the whole catalogue.</li>
+      </ul>
+      <dl class="nums">
+        <div><dt>Requests at up to 250/s</dt><dd>43,253</dd></div>
+        <div><dt>Failed</dt><dd>1</dd></div>
+        <div><dt>Rows read per page</dt><dd>3,012 → 21</dd></div>
+      </dl>
+      <p class="note">Private client code, not linked.</p>
+    </article>
+
+    <article class="case">
+      <div class="meta"><span class="tag">ACARSON LLC · 2026</span><span class="tag">React Native · Swift · Workers</span></div>
+      <h3>Pingcharm</h3>
+      <p class="what">AI reply assistant for chats. A Swift iOS keyboard extension reads the conversation with on-device OCR and suggests replies.</p>
+      <ul class="facts">
+        <li>React Native (Expo) app with RevenueCat subscriptions and Mixpanel funnels.</li>
+        <li>TypeScript API on Cloudflare Workers that falls back across Anthropic, Gemini, Grok and OpenRouter models.</li>
+        <li>Rated 5.0 from 6 US App Store ratings.</li>
+      </ul>
+      <p class="links"><a href="https://apps.apple.com/app/id6759834337">App Store</a></p>
+    </article>
+
+    <div class="also">
+      <h3>Also built</h3>
+      <ul>
+        <li><strong>MiniRec</strong> School and course recommendation platform. Next.js, Prisma, PostgreSQL, Redis queue workers for LLM guidance and email, Paystack and Stripe subscriptions.</li>
+        <li><strong>Foldbooth</strong> Flutter party camera with a Swift camera plugin and a Cloudflare Workers backend (D1, R2) for shared event albums.</li>
+        <li><strong>Python automation</strong> 50+ client projects on Upwork, 2020 to 2023.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="stack" aria-labelledby="stack-h">
+    <h2 id="stack-h">Stack</h2>
+    <dl class="stack">
+      <div><dt>Mobile</dt><dd>Flutter, Dart, React Native (Expo), Swift, Riverpod, Firebase, RevenueCat</dd></div>
+      <div><dt>Backend</dt><dd>TypeScript, Node.js, Hono, Python, PostgreSQL, Drizzle, Redis, Cloudflare Workers (D1, R2, Queues)</dd></div>
+      <div><dt>Web</dt><dd>React, Next.js, Vite</dd></div>
+      <div><dt>Fintech</dt><dd>Ledgers, idempotency, webhooks, KYC, bills and card providers, Paystack, Stripe</dd></div>
+      <div><dt>Practice</dt><dd>Test-driven development, k6, GitHub Actions, Xcode Cloud, Mixpanel</dd></div>
+    </dl>
+    <p class="edu">B.Sc. Computer Science, University of Lagos.</p>
+  </section>
+
+  <section id="contact" class="contact" aria-labelledby="contact-h">
+    <h2 id="contact-h">Open to remote roles</h2>
+    <p>Based in Lagos. Also open to Abuja and relocation with sponsorship.</p>
+    <p class="mail"><a href="mailto:acarsondev@gmail.com">acarsondev@gmail.com</a></p>
+    <ul class="actions">
+      <li><a class="btn" href="https://www.linkedin.com/in/uche-chimdindu-david">LinkedIn</a></li>
+      <li><a class="btn" href="https://github.com/acarsondave">GitHub</a></li>
+    </ul>
+  </section>
+</main>
+<footer><p>© 2026 David Uche</p></footer>
+</body>
+</html>
